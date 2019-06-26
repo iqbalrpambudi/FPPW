@@ -62,7 +62,6 @@
         margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
-        width: 75%;
         height: max-content;
         background-color: white;
         border-radius: 10px;
@@ -72,7 +71,6 @@
 
     /*container kolom untuk membuat 2 kolom*/
     .container .column {
-        width: 33.3%;
         padding: 10px;
         float: left;
     }
@@ -83,6 +81,7 @@
         clear: both;
     }
 
+    /*text didalam container*/
     .container .textpromo {
         margin-top: 25px;
         margin-left: 10px;
@@ -158,8 +157,117 @@
      .gambarpaket img {
         width: 100%;
         align-content: center;
-
     }
+    /*CSS Daffa*/
+    .container .kolom1{
+    width: 40%;
+    float: left;
+    height: max-content;
+    border-radius: 10px;
+    padding-top: 10px;
+    margin: 20px}
+    .kolom1 .isi1
+    {
+        width: 100%;      
+        padding: 10px;
+        background-color: #54e2c3;
+        border-radius: 20px;
+        height: max-content;
+    }
+    .kolom1 .dekripsi{
+        margin-top: 20px;
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+    }
+    .isi1 img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    .isi1 h2 {
+        text-align: center;
+        color: white;
+    }
+    
+    /*Kolom sebelah kanan dan property nya*/
+    .container .kolom2
+    {
+        width: 50%;
+        float: left;
+        height: max-content;
+        border-radius: 20px;
+        padding-top: 10px;
+        margin: 20px;
+    }
+    
+    .kolom2 .isi2
+    {
+        width: 100%;      
+        padding: 10px;
+        height: max-content;
+        border-radius: 20px;
+    }
+    .isi2 img{
+        width: 50%;
+        height: 200px;
+        margin: 10px;
+        float: left;
+        border-radius: 10px;
+    }
+    
+    .isi2 .ket {
+        font-size: 13px;
+        float: left;
+        width: 40%;
+        height: 200px;
+        margin: 10px;
+        position: relative;
+    }
+    
+    .ket h2
+    {
+        margin-bottom: 10px
+    }
+            /*CSS button*/
+            .ket button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #5bc0de;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            width: 100px;
+            height: 40px;
+            transition: all 0.5s;
+            cursor: pointer;
+            position: absolute;
+            bottom: 0;
+                }
+    
+            .ket button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+            }
+    
+            .ket button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+            }
+            .ket button:hover span {
+            padding-right: 25px;
+            }
+    
+            .ket button:hover span:after {
+            opacity: 1;
+            right: 0;
+            }
 
     /*CSS Color*/
     .bg-blue{
@@ -182,6 +290,15 @@
     }
     .wd-30{
         width: 30%;
+    }
+    .wd-90{
+        width: 90%;
+    }
+    .wd-75{
+        width: 75%;
+    }
+    .wd-33{
+        width: 33.3%;
     }
     
 
