@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f1f1f1;
+}
+
+/* ======  =======HEADER=====  ====== */
+.header {
+    padding: 15px;
+    background: #54e2c3;
+    box-shadow: 3px gray;
+}
+
+.header img {
+    width: 200px;
+}
+
+/* ===== =======NAVBAR====== ====== */
+#menu {
+
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 2px 5px 0px lightgray
+}
+
+
+#menu a {
+
+    float: right;
+    display: block;
+    color: #1b1b1b;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#menu a:hover {
+
+    background-color: #ddd;
+    color: black;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/*ContentCSS==================================*/
+/*container utama*/
+.container {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: max-content;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 90px;
+    padding-bottom: 10px;
+    -webkit-box-shadow: 2px 3px 5px 0px lightgray;
+}
+
+/*container kolom untuk membuat 2 kolom*/
+.container .column {
+    width: 50%;
+    padding: 20px;
+    float: left;
+}
+
+.column::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+/*setting gambar pada kolom*/
+.column img {
+    width: 40%;
+}
+
+.container .pembayaran {
+    margin: 25px;
+    border-bottom: 2px solid gray;
+}
+
+/*content row untuk membuat baris*/
+.container .contentrow {
+    background-color: #54e2c3;
+    width: 100%;
+    padding: 0;
+    border-radius: 15px;
+    height: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.contentrow img {
+    width: 70%;
+
+}
+
+/*content */
+.content {
+    float: center;
+    width: 70%;
+    height: 100px;
+    border: 1px gray solid;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 1px 1px 8px gray;
+}
+
+.content:hover {
+    background-color: #54e2c3;
+}
+
+
+/*CSS Additional*/
+.wd-20 {
+    width: 20%;
+}
+
+.wd-25 {
+    width: 25%;
+}
+
+.wd-30 {
+    width: 30%;
+}
+
+
+/*Feature CSS*/
+/*CSS Image Slider Overlay*/
+
+.slidercontainer {
+    position: relative;
+    width: 50%;
+}
+
+.sliderimage {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.slideroverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.sliderontainer:hover .slideroverlay {
+    height: 100%;
+}
+
+.slidertext {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*FooterCSS==================================*/
+.footer {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-color: #202020;
+    padding: 40px 40px 0px 40px;
+}
+
+.footer .footerkolom {
+    float: left;
+    height: 240px;
+    background-color: transparent;
+}
+
+.footer .footercopyright {
+    padding: 30px;
+    color: #f3f3f3;
+    text-align: center;
+}
+
+.footerkolom .footercontent {
+    color: whitesmoke;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.socmed {
+    width: 40px;
+
+}
+
+.socmed:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+    .container .column {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer .footerkolom {
+        width: 50%;
+    }
+}

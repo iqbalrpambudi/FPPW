@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/news.css">
+	<title>HotNews</title>
+</head>
+
+<body>
+	<div class="header">
+		<img class="brand" src="asset/brand.png">
+	</div>
+
+	<div id="menu">
+		<a href="#">Pembayaran</a>
+		<a href="#">Berita</a>
+		<a href="#">Lokasi</a>
+		<a href="#">Paket Liburan</a>
+		<a href="#">Home</a>
+	</div>
+	<div class="container">
+		<div class="rows">
+			<div class="slideshow-container">
+
+				<div class="mySlides fade">
+					<img src="asset/prabowo.jpg">
+					<div class="text">Revisi visi misi kubu Prabowo-Sandiaga: Langkah 'strategis' yakinkan publik?</div>
+				</div>
+
+				<div class="mySlides fade">
+					<img src="asset/c1.jpg">
+					<div class="text">Pebulutangkis Malaysia Lee Chong Wei pensiun: 'Saya berjuang habis-habisan untuk
+						negara'</div>
+				</div>
+
+				<div class="mySlides fade">
+					<img src="asset/t.jpg">
+					<div class="text">Iran tembak jatuh pesawat nirawak AS, Trump: Iran buat 'kesalahan besar'</div>
+				</div>
+			</div>
+			<div class="beritakotak"></div>
+			<div class="beritakotak"></div>
+			<div class="beritapanjang"></div>
+			<div style="clear:both"></div>
+
+
+		</div>
+
+		<div class="column">
+			<div class="rows" style="margin-top:30px">
+				<div class="kontent"><img src="asset/1.jpg"></div>
+				<div class="kontent">
+					<h3>Cari Teman Berlibur? Ini 3 Zodiak yang Cocok Diajak Traveling</h3>
+					<p>3 zodiak ini bakal seru banget kalau diajak traveling.</p>
+				</div>
+				<div style="clear:both"></div>
+				<hr>
+
+				<div class="kontent"><img src="asset/2.jpg"></div>
+				<div class="kontent">
+					<h3>5 Tempat Teraman di Dunia Buat Wanita Travelling Sendirian</h3>
+					<p>Tertarik untuk coba ke kota ini?</p>
+				</div>
+				<div style="clear:both"></div>
+				<hr>
+				<div class="kontent"><img src="asset/3.jpg"></div>
+				<div class="kontent">
+					<h3>Dari Bandung Sampai Labuan Bajo, Ini Lokasi Wisata Pilihan Resolusi 2019</h3>
+					<p>Sebelum bertandang ke negeri orang, sebaiknya ketahui modus-modus penipuan yang kerap terjadi dan
+						menimpa para traveller.</p>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="rows" style="margin-top:30px">
+				<div class="kontent"><img src="asset/4.jpg"></div>
+				<div class="kontent">
+					<h3>7 Trik Jitu Hindari Perampokan Saat Liburan</h3>
+					<p>Terapkan trik jitu berikut ini agar uang Anda tetap aman selama liburan</p>
+				</div>
+				<div style="clear:both"></div>
+
+				<hr>
+				<div style="clear:both"></div>
+				<div class="kontent"><img src="asset/5.jpg"></div>
+				<div class="kontent">
+					<h3>Jalan-Jalan Pakai Kartu Kredit Lebih Untung, Ini Buktinya</h3>
+					<p>Berikut bukti untungnya punya kartu kredit saat travelling.</p>
+				</div>
+				<div style="clear:both"></div>
+				<hr>
+				<div class="kontent"><img src="asset/6.jpg"></div>
+				<div class="kontent">
+					<h3>Liburan ke Yogyakarta, Jangan Lupa ke Sini</h3>
+					<p>Wisata pedesaan Omah Guyub Wringin Putih terdapat bangunan unik Balai Ekonomi Desa (Balkondes)
+						yang dibangun oleh Pertamina </p>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+		</div>
+
+
+		<div style="clear:both"></div>
+	</div>
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+			setTimeout(showSlides, 10000);
+		}
+
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			if (n > slides.length) { slideIndex = 1 }
+			if (n < 1) { slideIndex = slides.length }
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
+
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+
+			if (slideIndex > slides.length) { slideIndex = 1 }
+			slides[slideIndex - 1].style.display = "block";
+			setTimeout(showSlides, 10000); // Change image every 2 seconds
+		}
+	</script>
+
+	<div class="footer">
+		<div class="footerkolom wd-30" style="padding-right:20px">
+			<div class="footercontent">
+				<p style="font-size: larger">Dolandisik</p>
+				<br>
+				<p>Dolandisik adalah web yang menyediakan paket liburan menarik dan terbaik di Indonesia</p>
+			</div>
+		</div>
+		<div class="footerkolom wd-25">
+			<div class="footercontent">
+				<p style="font-size: larger">Temukan Kami</p>
+				<br>
+				<p>Jln Ring Road Utara Condong Catur </p>
+				<p> Sleman, Yogyakarta 55288</p>
+				<p>(0351)969696</p>
+			</div>
+		</div>
+		<div class="footerkolom wd-20">
+			<div class="footercontent">
+				<p style="margin:10px">Home</p>
+				<p style="margin:10px">Paket Liburan</p>
+				<p style="margin:10px">Lokasi</p>
+				<p style="margin:10px">Berita</p>
+				<p style="margin:10px">Pembayaran</p>
+			</div>
+		</div>
+		<div class="footerkolom wd-25">
+			<div class="footercontent">
+				<p style="font-size: larger">Ikuti Kami</p>
+				<br>
+				<img class="socmed" src="asset/facebook.png">
+				<img class="socmed" src="asset/instagram.png">
+				<img class="socmed" src="asset/twitter.png">
+			</div>
+			<div style="clear:both"></div>
+		</div>
+		<hr size="1px" color="gray">
+		<div class="footercopyright">Copyright 2019 Dolandisik Travel.</div>
+	</div>
+
+	<script src="js/js.js"></script>
+</body>
+
+</html>

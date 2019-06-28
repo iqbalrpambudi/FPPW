@@ -1,63 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="pic/icon.png">
-        <title>Keranjang</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css.css">
-    </head>
-    <body>
-        <script src="jquery.js"></script>
-        <script>
-            $(document).ready(function(){
-                $(".i2").hide();
-                $("#show").click(function(){
-                    $(".i2").toggle();
-                  });
-            });
-        </script>
-        <div class="header">
-            <img class="brand" src="asset\brand.png">
-        </div>
-                  
-        <div id="topnav">
-            <a href="#">News</a>
-            <a href="#">Berita</a>
-            <a href="#">Lokasi</a>
-            <a href="#">Paket Liburan</a>
-            <a href="#">Home</a>
-        </div>    
-        <div class="cont">
-            <div class="kol1">
-                <div class="bar1">
-                     <div class="i1">
-                            <img src="pic/par.jpg">
-                            <h2>PANTAI PARANGTRITIS</h2>
-                    </div>
-                    <div class="keterangan">
-                            <h2>Pantai Parangtritis</h2><br>
-                            Pantai Parangtritis adalah pantai yang paling populer yang terletak di Desa Parangtritis, 
-                            Kecamatan Kretek, Kabupaten Bantul Yogyakarta. 25 km dari kota <br><br><br>
-                            Biaya untuk Pantai Parngtritis adalah Rp 50.000,-<br>
-                            Dengan perjalanan dari yogyakarta opsi pemberangkatan ada tiga yaitu Pagi, Siang dan Sore
-                    </div>
-                    <div style="clear: both;"></div> 
+
+<head>
+    <link href="pic/icon.png">
+    <title>Keranjang</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/keranjang.css">
+</head>
+
+<body>
+    <div class="header">
+        <img class="brand" src="asset\brand.png">
+    </div>
+
+    <div id="menu">
+        <a href="#">News</a>
+        <a href="#">Berita</a>
+        <a href="#">Lokasi</a>
+        <a href="#">Paket Liburan</a>
+        <a href="#">Home</a>
+    </div>
+    <div class="cont">
+        <div class="kol1">
+            <div class="bar1">
+                <div class="i1">
+                    <img src="asset/par.jpg">
+                    <h2>PANTAI PARANGTRITIS</h2>
                 </div>
+                <div class="keterangan">
+                    <h2>Pantai Parangtritis</h2><br>
+                    Pantai Parangtritis adalah pantai yang paling populer yang terletak di Desa Parangtritis,
+                    Kecamatan Kretek, Kabupaten Bantul Yogyakarta. 25 km dari kota <br><br><br>
+                    Biaya untuk Pantai Parngtritis adalah Rp 50.000,-<br>
+                    Dengan perjalanan dari yogyakarta opsi pemberangkatan ada tiga yaitu Pagi, Siang dan Sore
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            <div class="bar1">
                 <div class="i3">
-                 <form>
+                    <form>
                         <table class="pem">
                             <tr>
                                 <td>Nama Lengkap</td>
                                 <td> : <input type="text" name="nama" placeholder=" Nama Lengkap"></td>
                                 <td></td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td>No Telphone</td>
                                 <td> : <input type="text" name="telp" placeholder=" No Telephone"></td>
                                 <td></td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td>Paket</td>
                                 <td> : <input type="text" name="paket" placeholder=" Paket"></td>
                                 <td></td>
@@ -65,7 +59,7 @@
                             <tr>
                                 <td>Waktu</td>
                                 <td>
-                                     : <select>
+                                    : <select>
                                         <option>Pilih Waktu</option>
                                         <option>Pagi</option>
                                         <option>Siang</option>
@@ -73,39 +67,48 @@
                                     </select>
                                 </td>
                             </tr>
-                             <tr>
+                            <tr>
                                 <td></td>
                                 <td></td>
-                                <td><button class="button" style="vertical-align:middle"><span>Lanjutkan </span></button></td>
+                                <td><button class="button" style="vertical-align:middle"><span>Lanjutkan
+                                        </span></button>
+                                </td>
                             </tr>
                         </table>
                     </form>
-                    </div>
+                </div>
             </div>
-            <div class="kol2">
-                    <button id="show">Saran</button>
-                     <div class="i2">
-                        <div class="nama"><center>Saran Pilihan</center></div>
-                        <div style="clear: both;"></div>
-                        <hr>
-                        <img src="pic/sri.jpg">
-                        <div class="nama">Air Terjun Sri Gethuk</div>
-                        <button class="button" style="vertical-align:middle"><span>Pilih </span></button>
-                        <div style="clear: both;"></div>
-                        <hr>
-                        <img src="pic/pram.jpg">
-                        <div class="nama">Candi Prambanan</div>
-                        <button class="button" style="vertical-align:middle"><span>Pilih </span></button>
-                        <div style="clear: both;"></div>
-                        <hr>
-                        <img src="pic/ker.jpg">
-                        <div class="nama">Keraton Kasultana Jogjakarta</div>
-                        <button class="button" style="vertical-align:middle"><span>Pilih </span></button>
-                        <div style="clear: both;"></div>
-                    </div>
+
+        </div>
+        <div class="kol2">
+
+            <div class="nama">
+                <center>Saran Pilihan</center>
             </div>
             <div style="clear: both;"></div>
+            <hr>
+            <div class="i2">
+                <img src="asset/sri.jpg">
+                <div class="nama">Air Terjun Sri Gethuk</div>
+                <button class="button" style="vertical-align:middle"><span>Pilih </span></button>
+                <div style="clear: both;"></div>
+                <hr>
+            </div>
+            <div class="i2">
+                <img src="asset/pram.jpg">
+                <div class="nama">Candi Prambanan</div>
+                <button class="button" style="vertical-align:middle"><span>Pilih </span></button>
+                <div style="clear: both;"></div>
+                <hr>
+            </div>
+            <div class="i2"><img src="asset/ker.jpg">
+                <div class="nama">Keraton Kasultana Jogjakarta</div>
+                <button class="button" style="vertical-align:middle"><span>Pilih </span></button>
+                <div style="clear: both;"></div>
+            </div>
         </div>
+        <div style="clear: both;"></div>
+    </div>
     <div class="footer">
         <div class="footerkolom wd-30" style="padding-right:20px">
             <div class="footercontent">
@@ -145,6 +148,7 @@
         <hr size="1px" color="gray">
         <div class="footercopyright">Copyright 2019 Dolandisik Travel.</div>
     </div>
-    <script src="js.js"></script>
+    <script src="js/js.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/about.css">
+  <title>About</title>
+</head>
+
+<body>
+
+  <div class="header">
+    <img class="brand" src="asset\brand.png">
+  </div>
+
+  <div id="menu">
+    <a href="#">Pembayaran</a>
+    <a href="#">Berita</a>
+    <a href="#">Lokasi </a>
+    <a href="#">Paket Liburan </a>
+    <a href="#">Home</a></li>
+
+  </div>
+
+  <div class="container">
+
+    <!-- MAIN (Center website) -->
+    <div class="main">
+
+      <h1>GALLERY DOLANDISIK<hr></h1>
+      <h4>Abadikan moment terindah bersama orang tersayang</h4>
+
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('semua')"> Tampilkan Semua</button>
+        <button class="btn" onclick="filterSelection('pantai')"> Pantai</button>
+        <button class="btn" onclick="filterSelection('pemandangan')"> Pemandangan </button>
+        <button class="btn" onclick="filterSelection('orang')"> Orang </button>
+      </div>
+
+      <!-- Portfolio Gallery Grid -->
+      <div class="row">
+        <div class="column pemandangan">
+          <div class="content">
+            <img src="asset/abt1.jpg" alt="Mountains" style="width:100%">
+            <h4>Mountains</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column pemandangan">
+          <div class="content">
+            <img src="asset/abt8.jpg" alt="Lights" style="width:100%">
+            <h4>Lights</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column pemandangan">
+          <div class="content">
+            <img src="asset/abt9.jpg" alt="Nature" style="width:100%">
+            <h4>Forest</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+
+        <div class="column pantai">
+          <div class="content">
+            <img src="asset/abt15.jpg" alt="Car" style="width:100%">
+            <h4>Retro</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column pantai">
+          <div class="content">
+            <img src="asset/abt16.jpg" alt="Car" style="width:100%">
+            <h4>Fast</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column pantai">
+          <div class="content">
+            <img src="asset/abt17.jpg" alt="Car" style="width:100%">
+            <h4>Classic</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+
+        <div class="column orang">
+          <div class="content">
+            <img src="asset/abt14.jpg" alt="Car" style="width:100%">
+            <h4>Girl</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column orang">
+          <div class="content">
+            <img src="asset/abt12.jpg" alt="Car" style="width:100%">
+            <h4>Man</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <div class="column orang">
+          <div class="content">
+            <img src="asset/abt13.jpg" alt="Car" style="width:100%">
+            <h4>Woman</h4>
+            <p>Lorem ipsum dolor..</p>
+          </div>
+        </div>
+        <!-- END GRID -->
+      </div>
+
+      <!-- END MAIN -->
+    </div>
+
+    <script>
+      filterSelection("semua")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "semua") c = "";
+        for (i = 0; i < x.length; i++) {
+          RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+        }
+      }
+
+      function AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+        }
+      }
+
+      function RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+
+
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+
+    </script>
+  </div>
+  <div class="footer">
+    <div class="footerkolom wd-30" style="padding-right:20px">
+      <div class="footercontent">
+        <p style="font-size: larger">Dolandisik</p>
+        <br>
+        <p>Dolandisik adalah web yang menyediakan paket liburan menarik dan terbaik di Indonesia</p>
+      </div>
+    </div>
+    <div class="footerkolom wd-25">
+      <div class="footercontent">
+        <p style="font-size: larger">Temukan Kami</p>
+        <br>
+        <p>Jln Ring Road Utara</p>
+        <p>Condong Catur</p>
+        <p>(0351)969696</p>
+      </div>
+    </div>
+    <div class="footerkolom wd-20">
+      <div class="footercontent">
+        <p style="margin:10px">Home</p>
+        <p style="margin:10px">Paket Liburan</p>
+        <p style="margin:10px">Lokasi</p>
+        <p style="margin:10px">Berita</p>
+        <p style="margin:10px">Pembayaran</p>
+      </div>
+    </div>
+    <div class="footerkolom wd-25">
+      <div class="footercontent">
+        <p style="font-size: larger">Ikuti Kami</p>
+        <br>
+        <img class="socmed" src="asset\facebook.png">
+        <img class="socmed" src="asset\instagram.png">
+        <img class="socmed" src="asset\twitter.png">
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <hr size="1px" color="gray">
+    <div class="footercopyright">Copyright 2019 Dolandisik Travel.</div>
+  </div>
+  <script src="js/js.js"></script>
+</body>
+
+</html>
