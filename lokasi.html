@@ -30,7 +30,7 @@
 					<p>Aneka Ragam Kuliner</p>
 					<p>Berbagai macam spot wisata</p>
 					<div class="button">
-                        <button id="bayar" class="cust-btn">
+                        <button id="bayar" class="cust-btn" onclick="goToURL()">
                             <span>
                                 Daftar
                             </span>
@@ -143,6 +143,11 @@
 		<div class="footercopyright">Copyright 2019 Dolandisik Travel.</div>
 	</div>
 	<script src="js/js.js"></script>
+	<script>
+	  function goToURL() {
+      location.href = 'lokasi-detail.html';
+    }
+	</script>
 </body>
 
 </html>

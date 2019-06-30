@@ -46,15 +46,18 @@ body {
     border-bottom: 3px solid #54e2c3;
     padding-right: 30px
 }
+
 .sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	opacity: 0.9;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
 }
-  .sticky + .container {
+
+.sticky +.cont {
     padding-top: 60px;
-  }
+}
+
 .cont {
     margin-top: 20px;
     margin-left: auto;

@@ -20,7 +20,7 @@
         <a href="lokasi.html">Lokasi </a>
         <a href="paket.html">Paket Liburan </a>
         <a href="homepage.html">Home</a></li>
-      </div>
+    </div>
     <div class="container wd-90">
         <div class="kolom1">
             <div class="isi1">
@@ -39,7 +39,8 @@
                     <h2>Pantai Parangtritis</h2>
                     <p>Desa Parangtritis, Kecamatan Kretek, Kabupaten Bantul Yogyakarta. (25 km sebelah selatan kota
                         Jogja)</p>
-                    <button class="button" style="vertical-align:middle"><span>Pilih </span></button>
+                    <button class="button" style="vertical-align:middle" onclick="goToURL()"><span>Pilih
+                        </span></button>
                 </div>
                 <div style="clear: both;"></div>
                 <hr>
@@ -111,6 +112,11 @@
         <div class="footercopyright">Copyright 2019 Dolandisik Travel.</div>
     </div>
     <script src="js/js.js"></script>
+    <script>
+        function goToURL() {
+            location.href = 'keranjang.html';
+        }
+    </script>
 </body>
 
 </html>
