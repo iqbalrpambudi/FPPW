@@ -27,6 +27,7 @@ body {
 	overflow: hidden;
 	background-color: white;
 	width: 100%;
+	z-index: 1;
 	box-shadow: 0px 2px 5px 0px lightgray
 }
 
@@ -51,60 +52,91 @@ body {
 	padding-right: 30px;
 }
 
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	opacity: 0.9;
+}
 
+.sticky+.rows {
+	padding-top: 60px;
+}
+
+/* Rows */
+.rows {
+	padding: 20px;
+	width: 100%;
+}
+
+.rows .beritakotak {
+	margin-left: 1%;
+	width: 24%;
+	height: 245px;
+	float: left;
+	background-color: yellow;
+	position: relative;
+	overflow: hidden;
+}
+
+.rows .beritapanjang {
+	margin-left: 1%;
+	width: 49%;
+	height: 245px;
+	float: left;
+	background-color: pink;
+	margin-top: 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.imgbox {
+	width: 100%;
+	height: 245px;
+	position: relative;
+	overflow: hidden;
+}
+
+.imgbox img {
+	min-height: 100%;
+	min-width: 100%;
+	position: absolute;
+	top: -9999px;
+	bottom: -9999px;
+	right: -9999px;
+	left: -9999px;
+	margin: auto;
+}
 
 /* Slideshow container==============================================================================*/
-.container .slideshow-container {
+.rows .slideshow-container {
 	width: 50%;
-	height: 30%;
+	height: 500px;
 	position: relative;
-	margin: auto;
+	overflow: hidden;
 	float: left;
-
 }
 
 .slideshow-container img {
-	width: 100%;
-	max-width: 100%;
-	border-radius: 10px;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-	cursor: pointer;
+	min-height: 100%;
+	min-width: 100%;
 	position: absolute;
-	top: 50%;
-	width: 100px;
-	padding: 16px;
-	margin-top: -22px;
-	color: white;
-	font-weight: bold;
-	font-size: 18px;
-	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
-	user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-	right: 0;
-	border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-	background-color: rgba(0, 0, 0, 0.8);
+	top: -9999px;
+	bottom: -9999px;
+	right: -9999px;
+	left: -9999px;
+	margin: auto;
 }
 
 /* Caption text */
 .text {
 	color: #f1f1f1;
+	background-color: black;
+	opacity: 0.7;
 	font-size: 25px;
 	padding: 8px 12px;
 	position: absolute;
-	bottom: 8px;
+	bottom: 0px;
 	width: 100%;
 	text-align: center;
 }
@@ -156,32 +188,11 @@ body {
 	background-color: white;
 	padding-top: 10px;
 	padding-left: 40px;
-	-webkit-box-shadow: 2px 3px 5px 0px lightgray;
+	box-shadow: 2px 3px 5px 0px lightgray;
 
 }
 
-.container .rows {
-	width: max-content;
-}
 
-.rows .beritakotak {
-	margin-left: 10px;
-	width: 230px;
-	height: 230px;
-	float: left;
-	background-color: yellow;
-	border-radius: 10px;
-}
-
-.rows .beritapanjang {
-	margin-top: 10px;
-	margin-left: 10px;
-	width: 470px;
-	height: 215px;
-	background-color: pink;
-	float: left;
-	border-radius: 10px;
-}
 
 .column {
 	float: left;

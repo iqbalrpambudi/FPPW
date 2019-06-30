@@ -51,9 +51,13 @@ body {
 }
 
 .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	opacity: 0.9;
+}
+.sticky + .container {
+    padding-top: 60px;
 }
 
 /*ContentCSS==================================*/

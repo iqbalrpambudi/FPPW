@@ -54,11 +54,14 @@ html {
 }
 
 .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	opacity: 0.9;
 }
-
+.sticky + .container {
+    padding-top: 60px;
+}
 .container {
     margin-top: 20px;
     margin-left: auto;

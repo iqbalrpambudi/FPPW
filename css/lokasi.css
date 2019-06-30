@@ -55,7 +55,9 @@ body {
 	background-color: #54e2c3;
 	opacity: 0.9;
 }
-
+.sticky + .container {
+    padding-top: 60px;
+  }
 /*content===================================*/
 .container {
 	width: 90%;
@@ -95,13 +97,16 @@ body {
 }
 
 .content .paragraf {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: lighter;
 	width: 50%;
 	height: 186px;
 	float: left;
 	padding-left: 20px;
 	position: relative;     
+}
+.paragraf h2{
+	font-weight: 400
 }
 
 .paragraf button {

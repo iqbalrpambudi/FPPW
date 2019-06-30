@@ -13,40 +13,53 @@
 	</div>
 
 	<div id="menu">
-		<a href="pembayaran.html">Pembayaran</a>
+		<a href="about.html">Tentang</a>
 		<a href="news.html">Berita</a>
 		<a href="lokasi.html">Lokasi </a>
 		<a href="paket.html">Paket Liburan </a>
 		<a href="homepage.html">Home</a></li>
-	  </div>
-	<div class="container">
-		<div class="rows">
-			<div class="slideshow-container">
+	</div>
 
-				<div class="mySlides fade">
-					<img src="asset/prabowo.jpg">
-					<div class="text">Revisi visi misi kubu Prabowo-Sandiaga: Langkah 'strategis' yakinkan publik?</div>
-				</div>
+	<div class="rows">
+		<div class="slideshow-container">
 
-				<div class="mySlides fade">
-					<img src="asset/c1.jpg">
-					<div class="text">Pebulutangkis Malaysia Lee Chong Wei pensiun: 'Saya berjuang habis-habisan untuk
-						negara'</div>
-				</div>
-
-				<div class="mySlides fade">
-					<img src="asset/t.jpg">
-					<div class="text">Iran tembak jatuh pesawat nirawak AS, Trump: Iran buat 'kesalahan besar'</div>
-				</div>
+			<div class="mySlides fade">
+				<img src="asset/prabowo.jpg">
+				<div class="text">Revisi visi misi kubu Prabowo-Sandiaga: Langkah 'strategis' yakinkan publik?</div>
 			</div>
-			<div class="beritakotak"></div>
-			<div class="beritakotak"></div>
-			<div class="beritapanjang"></div>
-			<div style="clear:both"></div>
 
+			<div class="mySlides fade">
+				<img src="asset/c1.jpg">
+				<div class="text">Pebulutangkis Malaysia Lee Chong Wei pensiun: 'Saya berjuang habis-habisan untuk
+					negara'</div>
+			</div>
 
+			<div class="mySlides fade">
+				<img src="asset/t.jpg">
+				<div class="text">Iran tembak jatuh pesawat nirawak AS, Trump: Iran buat 'kesalahan besar'</div>
+			</div>
 		</div>
-
+		<div class="beritakotak">
+			<div class="imgbox">
+				<img src="asset/jogja bay.jpg" alt="">
+			</div>
+			<div class="text">Jogjabay</div>
+		</div>
+		<div class="beritakotak">
+			<div class="imgbox">
+				<img src="asset/ske.jpg" alt="">
+			</div>
+			<div class="text">Jatim Park</div>
+		</div>
+		<div class="beritapanjang">
+			<div class="imgbox">
+				<img src="asset/prambanan.jpg" alt="">
+			</div>
+			<div class="text">Pesona Prambanan</div>
+		</div>
+		<div style="clear:both"></div>
+	</div>
+	<div class="container">
 		<div class="column">
 			<div class="rows" style="margin-top:30px">
 				<div class="kontent"><img src="asset/1.jpg"></div>
@@ -104,48 +117,7 @@
 
 		<div style="clear:both"></div>
 	</div>
-	<script>
-		var slideIndex = 1;
-		showSlides(slideIndex);
 
-		function plusSlides(n) {
-			showSlides(slideIndex += n);
-			setTimeout(showSlides, 10000);
-		}
-
-		function currentSlide(n) {
-			showSlides(slideIndex = n);
-		}
-
-		function showSlides(n) {
-			var i;
-			var slides = document.getElementsByClassName("mySlides");
-			if (n > slides.length) { slideIndex = 1 }
-			if (n < 1) { slideIndex = slides.length }
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
-			slides[slideIndex - 1].style.display = "block";
-			dots[slideIndex - 1].className += " active";
-		}
-
-		var slideIndex = 0;
-		showSlides();
-
-		function showSlides() {
-			var i;
-			var slides = document.getElementsByClassName("mySlides");
-
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
-			slideIndex++;
-
-			if (slideIndex > slides.length) { slideIndex = 1 }
-			slides[slideIndex - 1].style.display = "block";
-			setTimeout(showSlides, 10000); // Change image every 2 seconds
-		}
-	</script>
 
 	<div class="footer">
 		<div class="footerkolom wd-30" style="padding-right:20px">
@@ -188,6 +160,48 @@
 	</div>
 
 	<script src="js/js.js"></script>
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+			setTimeout(showSlides, 10000);
+		}
+
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			if (n > slides.length) { slideIndex = 1 }
+			if (n < 1) { slideIndex = slides.length }
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
+
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+
+			if (slideIndex > slides.length) { slideIndex = 1 }
+			slides[slideIndex - 1].style.display = "block";
+			setTimeout(showSlides, 10000); // Change image every 2 seconds
+		}
+	</script>
 </body>
 
 </html>

@@ -47,6 +47,27 @@ body {
   padding-right: 30px
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.sticky+.container {
+  padding-top: 60px;
+}
+
+.pagetitle {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  color: #f5f5f5;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
 .container {
   margin-top: 30px;
   margin-left: auto;
@@ -71,7 +92,9 @@ h1 {
 
 h4 {
   margin-top: 20px;
-  margin-bottom: 5px
+  margin-bottom: 5px;
+  font-weight: lighter;
+  font-size: 20px
 }
 
 .row {
@@ -99,11 +122,26 @@ h4 {
   background-color: #e8e8e8;
   padding: 10px;
   border: 1px #d3d3d3 solid;
-  border-radius: 5px
+  border-radius: 5px;
+  height: 100%;
 }
 
-.content img {
-  max-width: 100%
+.content .imgbox {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.imgbox img{
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  right: -9999px;
+  left: -9999px;
+  margin: auto;
 }
 
 .show {
@@ -113,18 +151,21 @@ h4 {
 .btn {
   border: none;
   outline: 0;
-  padding: 12px 16px;
-  background-color: smoke;
-  cursor: pointer
+  padding: 9px 16px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: .3s;
+  border-bottom: 3px solid transparent;
+  color: #1b1b1b
 }
 
 .btn:hover {
-  background-color: #54e2c3
+  border-bottom: 3px solid #5bc0de;
 }
 
 .btn.active {
-  background-color: #54e2c3;
-  color: #fff
+  background-color: transparent;
+  color: #202020
 }
 
 .wd-30 {
@@ -191,4 +232,8 @@ h4 {
   .footer .footerkolom {
     width: 50%
   }
+}
+
+.bg-blue{
+  background-color: #5bc0de;
 }
