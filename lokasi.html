@@ -12,13 +12,13 @@
 		<img class="brand" src="asset\brand.png">
 	</div>
 
-	<div id="topnav">
-		<a href="#">Pembayaran</a></li>
-		<a href="#">Berita</a></li>
-		<a href="#">Lokasi</a></li>
-		<a href="#">Paket Liburan</a></li>
-		<a href="#">Home</a></li>
-	</div>
+	<div id="menu">
+		<a href="pembayaran.html">Pembayaran</a>
+		<a href="news.html">Berita</a>
+		<a href="lokasi.html">Lokasi </a>
+		<a href="paket.html">Paket Liburan </a>
+		<a href="homepage.html">Home</a></li>
+	  </div>
 
 	<div class="container">
 		<div class="box1">
@@ -28,7 +28,13 @@
 					<p>Wisata: Pantai Kasap</p>
 					<p>Lokasi: Pacitan</p>
 					<p>Jenis paket: Silver</p>
-					<button class="button"><b>Pesan</b></button>
+					<div class="button">
+                        <button id="bayar" class="cust-btn">
+                            <span>
+                                Daftar
+                            </span>
+                        </button>
+                    </div>
 				</div>
 				<div style="clear:both"></div>
 				<hr>
@@ -39,7 +45,13 @@
 					<p>Wisata: Bedugul</p>
 					<p>Lokasi: Bali</p>
 					<p>Jenis paket: Platinum</p>
-					<button class="button"><b>Pesan</b></button>
+					<div class="button">
+                        <button id="bayar" class="cust-btn">
+                            <span>
+                                Daftar
+                            </span>
+                        </button>
+                    </div>
 				</div>
 				<div style="clear:both"></div>
 				<hr>
@@ -50,7 +62,13 @@
 					<p>Wisata: Onsen Songgoriti</p>
 					<p>Lokasi: Malang</p>
 					<p>Jenis paket: Gold</p>
-					<button class="button"><b>Pesan</b></button>
+					<div class="button">
+                        <button id="bayar" class="cust-btn">
+                            <span>
+                                Daftar
+                            </span>
+                        </button>
+                    </div>
 				</div>
 
 				<div style="clear:both"></div>
@@ -58,12 +76,19 @@
 		</div>
 		<div class="box2">
 			<div class="content">
-				<p class="paragraf2">
-					<h3>Paket populer</h3>
-				</p>
-				<hr width="85%">
+				<div class="pagetitle">Paket populer</div>
 				<ul>
 					<li>Paket Wisata Raja Ampat</li>
+					<li>Paket Wisata Bali</li>
+					<li>Paket Wisata Lombok</li>
+					<li>Paket Wisata Lamongan</li>
+					<li>Paket Wisata Borobudur</li>
+				</ul>
+			</div>
+			<div class="content">
+				<div class="pagetitle">Paket Ekonomis</div>
+				<ul>
+					<li>Paket Jelajah Jogja</li>
 					<li>Paket Wisata Bali</li>
 					<li>Paket Wisata Lombok</li>
 					<li>Paket Wisata Lamongan</li>
@@ -115,7 +140,7 @@
 		<hr size="1px" color="gray">
 		<div class="footercopyright">Copyright 2019 Dolandisik Travel.</div>
 	</div>
-	<script src="js.js"></script>
+	<script src="js/js.js"></script>
 </body>
 
 </html>

@@ -1,206 +1,194 @@
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background: #f1f1f1;
-    }
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f1f1f1
+}
 
-    /*header CSS==================================*/
-    .header {
-      padding: 15px;
-      background: #54e2c3;
-      box-shadow: 3px gray;
-    }
+.header {
+  padding: 15px;
+  background: #54e2c3;
+  box-shadow: 3px gray
+}
 
-    .header img {
-      width: 200px;
-    }
+.header img {
+  width: 200px
+}
 
-    /*Menu CSS==================================*/
-    #menu {
+#menu {
+  overflow: hidden;
+  background-color: #fff;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0 2px 5px 0 #d3d3d3
+}
 
-      overflow: hidden;
-      background-color: white;
-      width: 100%;
-      box-shadow: 0px 2px 5px 0px lightgray
-    }
+#menu a {
+  float: right;
+  display: block;
+  color: #1b1b1b;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  position: relative;
+  transition: .5s;
+  font-size: 18px
+}
 
-    #menu a {
+#menu a:hover {
+  background-color: #ddd;
+  color: #000;
+  border-bottom: 3px solid #54e2c3;
+  padding-right: 30px
+}
 
-      float: right;
-      display: block;
-      color: #1b1b1b;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
+.container {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: max-content;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 3px 5px 0 #d3d3d3
+}
 
-    #menu a:hover {
+.container .main {
+  max-width: 100%;
+  margin: auto
+}
 
-      background-color: #ddd;
-      color: black;
-    }
+h1 {
+  font-size: 50px;
+  word-break: break-all
+}
 
-    .sticky {
-      position: fixed;
-      top: 0;
-      width: 100%;
-    }
+h4 {
+  margin-top: 20px;
+  margin-bottom: 5px
+}
 
-    .container {
-      margin-top: 30px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 90%;
-      height: max-content;
-      background-color: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 2px 3px 5px 0px lightgray
-    }
+.row {
+  margin: 10px -16px
+}
 
-    /* Center website */
-    .container .main {
-      max-width: 100%;
-      margin: auto;
-    }
+.row,
+.row>.column {
+  padding: 8px
+}
 
-    h1 {
-      font-size: 50px;
-      word-break: break-all;
-    }
-    h4{
-      margin-top: 20px;
-      margin-bottom: 5px;
-    }
+.column {
+  float: left;
+  width: 33.33%;
+  display: none
+}
 
-    .row {
-      margin: 10px -16px;
-    }
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
 
-    /* Add padding BETWEEN each column */
-    .row,
-    .row>.column {
-      padding: 8px;
-    }
+.content {
+  background-color: #e8e8e8;
+  padding: 10px;
+  border: 1px #d3d3d3 solid;
+  border-radius: 5px
+}
 
-    /* Create three equal columns that floats next to each other */
-    .column {
-      float: left;
-      width: 33.33%;
-      display: none;
-      /* Hide all elements by default */
-    }
+.content img {
+  max-width: 100%
+}
 
-    /* Clear floats after rows */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+.show {
+  display: block
+}
 
-    /* Content */
-    .content {
-      background-color: #e8e8e8;
-      padding: 10px;
-      border: 1px lightgray solid;
-      border-radius: 5px;
-    }
-    .content img{
-      max-width: 100%;
-    }
+.btn {
+  border: none;
+  outline: 0;
+  padding: 12px 16px;
+  background-color: smoke;
+  cursor: pointer
+}
 
-    /* The "show" class is added to the filtered elements */
-    .show {
-      display: block;
-    }
+.btn:hover {
+  background-color: #54e2c3
+}
 
-    /* Style the buttons */
-    .btn {
-      border: none;
-      outline: none;
-      padding: 12px 16px;
-      background-color: smoke;
-      cursor: pointer;
-    }
+.btn.active {
+  background-color: #54e2c3;
+  color: #fff
+}
 
-    .btn:hover {
-      background-color: #54e2c3;
-    }
+.wd-30 {
+  width: 30%
+}
 
-    .btn.active {
-      background-color: #54e2c3;
-      color: white;
-    }
+.wd-25 {
+  width: 25%
+}
 
-    .wd-30 {
-      width: 30%;
-    }
+.wd-20 {
+  width: 20%
+}
 
-    .wd-25 {
-      width: 25%;
-    }
+.footer {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: #202020;
+  padding: 40px 40px 0 40px
+}
 
-    .wd-20 {
-      width: 20%;
-    }
+.footer .footerkolom {
+  float: left;
+  height: 240px;
+  background-color: transparent
+}
 
-    /*FooterCSS==================================*/
-    .footer {
-      margin-top: 20px;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      background-color: #202020;
-      padding: 40px 40px 0px 40px;
-    }
+.footer .footercopyright {
+  padding: 30px;
+  color: #f3f3f3;
+  text-align: center
+}
 
-    .footer .footerkolom {
-      float: left;
-      height: 240px;
-      background-color: transparent;
-    }
+.footerkolom .footercontent {
+  color: #f5f5f5;
+  font-size: 16px;
+  background-color: transparent
+}
 
-    .footer .footercopyright {
-      padding: 30px;
-      color: #f3f3f3;
-      text-align: center;
-    }
+.socmed {
+  width: 40px
+}
 
-    .footerkolom .footercontent {
-      color: whitesmoke;
-      font-size: 16px;
-      background-color: transparent;
-    }
+.socmed:hover {
+  cursor: pointer
+}
 
-    .socmed {
-      width: 40px;
+@media screen and (max-width:950px) {
+  .container .column {
+    float: none;
+    width: 100%
+  }
+}
 
-    }
+@media screen and (max-width:500px) {
+  .container {
+    width: 100%
+  }
+}
 
-    .socmed:hover {
-      cursor: pointer;
-    }
-
-    @media screen and (max-width: 950px) {
-      .container .column {
-        float: none;
-        width: 100%;
-      }
-    }
-
-    @media screen and (max-width: 500px) {
-      .container {
-        width: 100%;
-      }
-    }
-
-    @media screen and (max-width: 500px) {
-      .footer .footerkolom {
-        width: 50%;
-      }
-    }
+@media screen and (max-width:500px) {
+  .footer .footerkolom {
+    width: 50%
+  }
+}

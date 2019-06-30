@@ -7,26 +7,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/pembayaran.css">
 </head>
-<script>
-    window.onscroll = function () {
-        myFunction()
-    };
-
-    var navbar = document.getElementById("topnav");
-    var sticky = navbar.offsetTop;
-
-    function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        }
-        else {
-            navbar.classList.remove("sticky");
-        }
-    } 
-</script>
-<style>
-
-</style>
 
 <body>
     <div class="header">
@@ -35,56 +15,84 @@
 
 
     <div id="menu">
-        <a href="#">Pembayaran</a>
-        <a href="#">Berita</a>
-        <a href="#">Lokasi</a>
-        <a href="#">Paket Liburan</a>
-        <a href="#">Home</a>
+        <a href="pembayaran.html">Pembayaran</a>
+        <a href="news.html">Berita</a>
+        <a href="lokasi.html">Lokasi </a>
+        <a href="paket.html">Paket Liburan </a>
+        <a href="homepage.html">Home</a></li>
     </div>
 
 
 
     <div class="container">
-        <h2 class="pembayaran">Pembayaran Dapat Dilakukan Melalui Bank berikut : </h2>
+        <div class="pagetitle">Pilih Bank</div>
 
         <div class="column">
-            <div class="content">
+            <div id="idbank-bca" class="content">
                 <img src="asset/bca.png">
             </div>
-        </div>
-
-        <div class="column">
-            <div class="content">
+            <div id="idbank-bni" class="content">
                 <img src="asset/BNI.png">
             </div>
-        </div>
-
-        <div class="column">
-            <div class="content">
+            <div id="idbank-bri" class="content">
                 <img src="asset/bri.png">
             </div>
-        </div>
-
-        <div class="column">
-            <div class="content">
+            <div id="idbank-mandiri" class="content">
                 <img src="asset/mandiri.png">
             </div>
-        </div>
-
-        <div class="column">
-            <div class="content">
+            <div id="idbank-muamalat" class="content">
                 <img src="asset/muamalat.png">
             </div>
-        </div>
-
-        <div class="column">
-            <div class="content">
+            <div id="idbank-btn" class="content">
                 <img src="asset/btn.png">
             </div>
         </div>
 
 
-        <hr>
+        <div class="column">
+            <table>
+                <tr>
+                    <td>Nama Lengkap</td>
+                    <td> : <span id="lblNama"></span></td>
+
+                </tr>
+                <tr>
+                    <td>No Telphone</td>
+                    <td> : <span id="lblTelp"></span></td>
+
+                </tr>
+                <tr>
+                    <td>Waktu</td>
+                    <td>
+                        : <spanid id="lblWaktu"></spanid>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jumlah orang</td>
+                    <td>
+                        : <span id="lblJumlah"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Harga</td>
+                    <td> : <span id="lblHarga"></span></td>
+                </tr>
+                <tr>
+                    <td>Bank</td>
+                    <td> : <img class="bank" src="" alt=""></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="btnPopup" class="button">
+                            <span>
+                                Lanjutkan
+                            </span>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="clear: both"></div>
     </div>
 
 
@@ -131,6 +139,54 @@
     </div>
 
     <script src="js/js.js"></script>
+    <script src="js/jquery.js"></script>
+
+    <!-- Script mengambil data dari URL -->
+    <script>
+        var queryString = new Array();
+        $(function () {
+            if (queryString.length == 0) {
+                if (window.location.search.split('?').length > 1) {
+                    var params = window.location.search.split('?')[1].split('&');
+                    for (var i = 0; i < params.length; i++) {
+                        var key = params[i].split('=')[0];
+                        var value = decodeURIComponent(params[i].split('=')[1]);
+                        queryString[key] = value;
+                    }
+                }
+            }
+            if (queryString['nama'] != null && queryString['telp'] != null && queryString['waktu'] != null && queryString['jumlah'] != null && queryString['harga'] != null) {
+                var datanama = "";
+                var datatelp = "";
+                var datawakt = "";
+                var datajml = "";
+                var datahrga = "";
+                datanama += queryString['nama'];
+                datatelp += queryString['telp'];
+                datawakt += queryString['waktu'];
+                datajml += queryString['jumlah'];
+                datahrga += queryString['harga'];
+                $("#lblNama").html(datanama);
+                $("#lblTelp").html(datatelp);
+                $("#lblWaktu").html(datawakt);
+                $("#lblJumlah").html(datajml);
+                $("#lblHarga").html(datahrga);
+            }
+        });
+    </script>
+
+    <!-- Script Memilih Bank -->
+    <script>
+        $(document).ready(function () {
+            $("#bank").hide();
+        });
+        $(document).ready(function () {
+            $("#idbank-bni").click(function () {
+                $(".bank").attr("src","asset/bri.png");
+                $(".bank").show(1000);
+            });
+        });
+    </script>
 
 </body>
 

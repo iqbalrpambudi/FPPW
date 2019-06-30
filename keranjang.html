@@ -7,6 +7,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/keranjang.css">
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".i3").hide();
+        });
+        $(document).ready(function () {
+            $("#bayar").click(function () {
+                $(".i3").toggle(1000);
+            });
+        });
+
+
+    </script>
 </head>
 
 <body>
@@ -15,7 +28,7 @@
     </div>
 
     <div id="menu">
-        <a href="#">News</a>
+        <a href="#">Tentang</a>
         <a href="#">Berita</a>
         <a href="#">Lokasi</a>
         <a href="#">Paket Liburan</a>
@@ -30,52 +43,80 @@
                 </div>
                 <div class="keterangan">
                     <h2>Pantai Parangtritis</h2><br>
-                    Pantai Parangtritis adalah pantai yang paling populer yang terletak di Desa Parangtritis,
-                    Kecamatan Kretek, Kabupaten Bantul Yogyakarta. 25 km dari kota <br><br><br>
-                    Biaya untuk Pantai Parngtritis adalah Rp 50.000,-<br>
-                    Dengan perjalanan dari yogyakarta opsi pemberangkatan ada tiga yaitu Pagi, Siang dan Sore
+                    <p>Pantai Parangtritis adalah pantai yang paling populer yang terletak di Desa Parangtritis,
+                        Kecamatan Kretek, Kabupaten Bantul Yogyakarta. 25 km dari kota.
+                        Biaya untuk Pantai Parngtritis adalah Rp 50.000,</p>
+                    <p>Dengan perjalanan dari yogyakarta opsi pemberangkatan ada tiga yaitu Pagi, Siang dan Sore</p>
+                    <div class="button">
+                        <button id="bayar" class="cust-btn">
+                            <span>
+                                Daftar
+                            </span>
+                        </button>
+                    </div>
                 </div>
                 <div style="clear: both;"></div>
             </div>
             <div class="bar1">
                 <div class="i3">
-                    <form>
-                        <table class="pem">
-                            <tr>
-                                <td>Nama Lengkap</td>
-                                <td> : <input type="text" name="nama" placeholder=" Nama Lengkap"></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>No Telphone</td>
-                                <td> : <input type="text" name="telp" placeholder=" No Telephone"></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Paket</td>
-                                <td> : <input type="text" name="paket" placeholder=" Paket"></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Waktu</td>
-                                <td>
-                                    : <select>
-                                        <option>Pilih Waktu</option>
-                                        <option>Pagi</option>
-                                        <option>Siang</option>
-                                        <option>Sore</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td><button class="button" style="vertical-align:middle"><span>Lanjutkan
-                                        </span></button>
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
+                    <table>
+                        <tr>
+                            <td>Nama Lengkap</td>
+                            <td> <input id="txtNama" type="text" name="nama" placeholder=" Nama Lengkap"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>No Telphone</td>
+                            <td> <input id="txtTelp" class="inputClass" type="text" name="telp"
+                                    placeholder=" No Telephone">
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Waktu</td>
+                            <td>
+                                <select id="slWaktu" name="waktu">
+                                    <option>Pilih Waktu</option>
+                                    <option>Pagi</option>
+                                    <option>Siang</option>
+                                    <option>Sore</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jumlah orang</td>
+                            <td>
+                                <select id="slJumlah" name="jumlah">
+                                    <option>Jumlah Pemesan</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Harga</td>
+                            <td> <input id="txtHarga" type="text" name="harga" placeholder=" Harga Satuan"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button id="btnQueryString" class="button">
+                                    <span>
+                                        Lanjutkan
+                                    </span>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
 
@@ -83,25 +124,23 @@
         <div class="kol2">
 
             <div class="nama">
-                <center>Saran Pilihan</center>
+                <div class="pagetitle">Saran Pilihan</div>
             </div>
-            <div style="clear: both;"></div>
-            <hr>
             <div class="i2">
-                <img src="asset/sri.jpg">
+                <div class="imagebox"><img src="asset/sri.jpg"></div>
+
                 <div class="nama">Air Terjun Sri Gethuk</div>
                 <button class="button" style="vertical-align:middle"><span>Pilih </span></button>
                 <div style="clear: both;"></div>
-                <hr>
             </div>
             <div class="i2">
-                <img src="asset/pram.jpg">
+                <div class="imagebox"><img src="asset/pram.jpg"></div>
                 <div class="nama">Candi Prambanan</div>
                 <button class="button" style="vertical-align:middle"><span>Pilih </span></button>
                 <div style="clear: both;"></div>
-                <hr>
             </div>
-            <div class="i2"><img src="asset/ker.jpg">
+            <div class="i2">
+                <div class="imagebox"><img src="asset/ker.jpg"></div>
                 <div class="nama">Keraton Kasultana Jogjakarta</div>
                 <button class="button" style="vertical-align:middle"><span>Pilih </span></button>
                 <div style="clear: both;"></div>
@@ -149,6 +188,15 @@
         <div class="footercopyright">Copyright 2019 Dolandisik Travel.</div>
     </div>
     <script src="js/js.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#btnQueryString").bind("click", function () {
+                var url = "pembayaran.html?nama=" + encodeURIComponent($("#txtNama").val()) + "&telp=" + encodeURIComponent($("#txtTelp").val()) + "&waktu=" + encodeURIComponent($("#slWaktu").val()) + "&jumlah=" + encodeURIComponent($("#slJumlah").val()) + "&harga=" + encodeURIComponent($("#txtHarga").val());
+                window.location.href = url;
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f1f1f1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*header CSS==================================*/
+.header {
+    padding: 15px;
+    background: #54e2c3;
+    box-shadow: 3px gray;
+}
+
+.header img {
+    width: 200px;
+}
+
+/*NavBar CSS==================================*/
+#menu {
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0px 2px 5px 0px lightgray
+}
+
+#menu a {
+    float: right;
+    display: block;
+    color: #1b1b1b;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    position: relative;
+    transition: 0.5s;
+    font-size: 18px
+}
+
+#menu a:hover {
+    background-color: #ddd;
+    color: black;
+    border-bottom: 3px solid #54e2c3;
+    padding-right: 30px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.container {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: max-content;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 85%;
+    box-shadow: 2px 3px 5px 0px lightgray
+}
+
+.pagetitle {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: #5bc0de;
+    color: whitesmoke;
+    font-size: 20px
+}
+
+.container .colprom {
+    width: 50%;
+    float: left;
+    padding: 30px;
+}
+
+.colprom img {
+    max-width: 100%;
+    border-radius: 5px
+}
+
+.colprom .imagebox {
+    padding: 5px;
+    box-shadow: 0px 0px 5px 1px lightgray;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.codebox {
+    padding: 10px;
+    font-family: monospace;
+    color: chocolate;
+    border-left: 5px solid lightseagreen;
+    width: max-content;
+    background-color: #e8e8e8;
+    font-size: 20px;
+    margin-top: 20px
+}
+
+/*FooterCSS==================================*/
+.footer {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-color: #202020;
+    padding: 40px 40px 0px 40px;
+}
+
+.footer .footerkolom {
+    float: left;
+    height: 240px;
+    background-color: transparent;
+}
+
+.footer .footercopyright {
+    padding: 30px;
+    color: #f3f3f3;
+    text-align: center;
+}
+
+.footerkolom .footercontent {
+    color: whitesmoke;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.socmed {
+    width: 40px;
+
+}
+
+.socmed:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer .footerkolom {
+        width: 50%;
+    }
+}
+
+
+.rght {
+    text-align: right
+}
+
+.wd-20 {
+    width: 20%;
+}
+
+.wd-25 {
+    width: 25%;
+}
+
+.wd-30 {
+    width: 30%;
+}

@@ -40,15 +40,17 @@ html {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: all .3s ease;
+    border-bottom: 3px solid transparent;
+    position: relative;
+    transition: 0.5s;
+    font-size: 18px
 }
 
 #menu a:hover {
     background-color: #ddd;
     color: black;
-    border-bottom: 2px solid #54e2c3;
-
+    border-bottom: 3px solid #54e2c3;
+    padding-right: 30px;
 }
 
 .sticky {
@@ -66,7 +68,8 @@ html {
     height: max-content;
     background-color: white;
     border-radius: 10px;
-    padding-top: 10px;
+    padding: 20px;
+    width: 85%;
     box-shadow: 2px 3px 5px 0px lightgray
 }
 
@@ -74,6 +77,7 @@ html {
 .container .column {
     padding: 10px;
     float: left;
+    width: 33.3%
 }
 
 .column::after {
@@ -82,280 +86,112 @@ html {
     clear: both;
 }
 
-/*text didalam container*/
-.container .textpromo {
-    margin-top: 25px;
-    margin-left: 10px;
-    width: 50%;
-    color: #4d4d4d
-}
-
-/*content row untuk membuat baris*/
-.container .contentrow {
-    background-color: #54e2c3;
-    width: 95%;
-    padding: 0;
-    border-radius: 20px;
-    height: max-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    overflow: hidden;
-    box-shadow: 2px 1px 5px gray;
-}
-
-.contentrow img {
-    max-width: 100%;
-    border-radius: 20px;
-    transition: .3s ease;
-}
-
-.contentrow:hover img {
-    transform: scale(1.04);
-}
-
-.contentrow h2 {
-    margin: 10px auto 10px 5%;
-    color: white;
+.pagetitle
+{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: #5bc0de;
+    color: whitesmoke;
+    font-size: 24px;
+    margin-bottom: 10px
 }
 
 /*content terletak didalam kolom*/
-.content {
+.column .content {
     width: 100%;
     background-color: #e8e8e8;
     border-radius: 5px;
     transition: all .3s ease;
-
+    height: 400px;
+    align-content: center;
+    position: relative;
 }
-
 
 .content:hover {
     background-color: #ccebff;
 }
-
+.content p{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: lighter;
+  }
 .content .titlepaket {
     width: 100%;
     height: max-content;
-    padding: 15px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     text-align: center;
-    color: white;
     font-size: 20px;
-    padding: 25px
+}
+/* Button */
+/*CSS button*/
+.content .button {
+    width: 70%;
+    height: max-content;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 15px;
+    margin-left: 15%;
+    color: #1b1b1b;
+    position: absolute;
+    bottom: 20px;
+    border: 2px solid #3bb878;
+    transition: .3s;
 }
 
-.titlepaket:hover {
+.content .button:hover {
+    background-color: #3bb878;
+    color: white;
     cursor: pointer;
 }
 
-.content .gambarpaket {
+.content .harga {
     width: 100%;
     height: max-content;
     padding: 20px;
-    text-align: left;
+    text-align: center;
+    font-size: 30px;
+    font-weight: lighter;
 }
 
 .gambarpaket img {
     width: 100%;
+    margin-top: 10px;
     align-content: center;
 }
 
-/*CSS Daffa*/
-.container .kolom1 {
-    width: 40%;
-    float: left;
-    height: max-content;
-    border-radius: 10px;
-    padding-top: 10px;
-    margin: 20px
-}
-
-.kolom1 .isi1 {
-    width: 100%;
-    padding: 10px;
-    background-color: #54e2c3;
-    border-radius: 20px;
-    height: max-content;
-}
-
-.kolom1 .dekripsi {
-    margin-top: 20px;
-    font-size: 16px;
-    width: 100%;
-    text-align: center;
-}
-
-.isi1 img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.isi1 h2 {
-    text-align: center;
-    color: white;
-}
-
-/*Kolom sebelah kanan dan property nya*/
-.container .kolom2 {
-    width: 50%;
-    float: left;
-    height: max-content;
-    border-radius: 20px;
-    padding-top: 10px;
-    margin: 20px;
-}
-
-.kolom2 .isi2 {
-    width: 100%;
-    padding: 10px;
-    height: max-content;
-    border-radius: 20px;
-}
-
-.isi2 img {
-    width: 50%;
-    height: 200px;
-    margin: 10px;
-    float: left;
-    border-radius: 10px;
-}
-
-.isi2 .ket {
-    font-size: 13px;
-    float: left;
-    width: 40%;
-    height: 200px;
-    margin: 10px;
-    position: relative;
-}
-
-.ket h2 {
-    margin-bottom: 10px
-}
-
-/*CSS button*/
-.ket button {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: #5bc0de;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 20px;
-    width: 100px;
-    height: 40px;
-    transition: all 0.5s;
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
-}
-
-.ket button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-.ket button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-
-.ket button:hover span {
-    padding-right: 25px;
-}
-
-.ket button:hover span:after {
-    opacity: 1;
-    right: 0;
-}
 
 /*CSS Color*/
 .bg-blue {
     background-color: #00aeef;
+    color: white
 }
 
 .bg-green {
     background-color: #3bb878;
 }
-
+.bg-platinum{
+    background-color: #706fd3;
+    color: white;
+}
+.bg-gold{
+    background-color: #ffb142;
+    color: white;
+}
+.bg-silver{
+    background-color: #cd7f32;
+    color: white;
+}
 .tx-default {
     color: #4d4d4d;
 }
 
-/*CSS Additional*/
-.wd-20 {
-    width: 20%;
-}
-
-.wd-25 {
-    width: 25%;
-}
-
-.wd-30 {
-    width: 30%;
-}
-
-.wd-90 {
-    width: 90%;
-}
-
-.wd-75 {
-    width: 75%;
-}
-
-.wd-33 {
-    width: 33.3%;
-}
-
-
-/*Feature CSS*/
-/*CSS Image Slider Overlay*/
-
-.slidercontainer {
-    position: relative;
-    width: 50%;
-}
-
-.sliderimage {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.slideroverlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #008CBA;
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    transition: .5s ease;
-}
-
-.sliderontainer:hover .slideroverlay {
-    height: 100%;
-}
-
-.slidertext {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
 
 /*FooterCSS==================================*/
 .footer {
@@ -383,6 +219,7 @@ html {
     color: whitesmoke;
     font-size: 16px;
     background-color: transparent;
+    font-weight: lighter
 }
 
 .socmed {
@@ -394,36 +231,48 @@ html {
     cursor: pointer;
 }
 
+
+/* Media Responsive Layout */
 @media screen and (max-width: 950px) {
     .container .column {
-        float: none;
+        width: 50%;
+    }
+}
+@media screen and (max-width: 710px) {
+    .container .column {
         width: 100%;
+        float: none;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 710px) {
     .container {
         width: 100%;
+        padding: 10%;
     }
 }
 
+@media screen and (max-width: 710px) {
+    .column .content {
+        height: 500px;
+    }
+}
 @media screen and (max-width: 500px) {
     .footer .footerkolom {
         width: 50%;
     }
 }
 
-@media screen and (max-width: 950px) {
-    .container .kolom1 {
-        float: none;
-        width: 100%;
-        margin: 0;
-    }
+/* CSS Tambahan */
+.wd-20 {
+    width: 20%;
 }
 
-@media screen and (max-width: 950px) {
-    .container .kolom2 {
-        float: none;
-        width: 100%;
-    }
+.wd-25 {
+    width: 25%;
 }
+
+.wd-30 {
+    width: 30%;
+}
+
