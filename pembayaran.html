@@ -138,7 +138,7 @@
         <div class="footercopyright">Copyright 2019 Dolandisik Travel.</div>
     </div>
 
-    <script src="js/js.js"></script>
+    <script src="js/stickynavbar.js"></script>
     <script src="js/jquery.js"></script>
 
     <!-- Script mengambil data dari URL -->
@@ -182,7 +182,27 @@
         });
         $(document).ready(function () {
             $("#idbank-bni").click(function () {
+                $(".bank").attr("src","asset/BNI.png");
+                $(".bank").show(1000);
+            });
+            $("#idbank-bri").click(function () {
                 $(".bank").attr("src","asset/bri.png");
+                $(".bank").show(1000);
+            });
+            $("#idbank-mandiri").click(function () {
+                $(".bank").attr("src","asset/mandiri.png");
+                $(".bank").show(1000);
+            });
+            $("#idbank-bca").click(function () {
+                $(".bank").attr("src","asset/bca.png");
+                $(".bank").show(1000);
+            });
+            $("#idbank-muamalat").click(function () {
+                $(".bank").attr("src","asset/muamalat.png");
+                $(".bank").show(1000);
+            });
+            $("#idbank-btn").click(function () {
+                $(".bank").attr("src","asset/btn.png");
                 $(".bank").show(1000);
             });
         });

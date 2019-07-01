@@ -297,3 +297,8 @@ body {
 .wd-20 {
   width: 20%
 }
+
+#promo{
+  background-image: url("../asset/bannerpromo1.jpg");
+  height: 300px;
+}

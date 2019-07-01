@@ -18,22 +18,20 @@
 		<a href="lokasi.html">Lokasi </a>
 		<a href="paket.html">Paket Liburan </a>
 		<a href="homepage.html">Home</a></li>
-	  </div>
+	</div>
 
 	<div class="container">
 		<div class="box1">
 			<div class="content">
-				<img src="asset/pantai_kasap.jpg" class="img-proj"></img>
-				<p class="paragraf">
-					<h2>Wisata: PANTAI KASAP</h2>
-				</p>
+				<img src="asset/pantai_kasap.jpg"></img>
+				<h2>Wisata: PANTAI KASAP</h2>
 				<h2>Lokasi: Pacitan</h2>
-				<h2>Jenis paket: Silver</h2>
-				<button class="button"><b>Pesan</b></button>
+				<h2>Harga : Rp. 999.999</h2>
+				<button class="button" onclick="goToURL()"><span>Pesan</span></button>
 
-				<div style="clear:both">
-				</div>
-				<hr>
+				<div style="clear:both"></div>
+			</div>
+			<div class="content">
 				<p class="paragraf">Pantai Kasap. Alam yang membentuk Jawa Timur sangatlah mengagumkan.
 					Daratannya dikukuhkan oleh gunung-gunung molek menjulang, sementara pesisirnya
 					berhias pantai-pantai menawan. Satu diantaranya, Pantai Kasap yang menawarkan
@@ -48,21 +46,31 @@
 					panorama mirip Raja Ampat.</p>
 			</div>
 		</div>
-		<div class="box2">
+		<div id="sidebar" class="box2">
+			<div class="pagetitle">Wisata Lainnya</div>
 			<div class="content">
-				<div class="pagetitle">Paket populer</div>
-				<hr width="85%">
-				<ul>
-					<li>Paket Wisata Raja Ampat</li>
-					<li>Paket Wisata Bali</li>
-					<li>Paket Wisata Lombok</li>
-					<li>Paket Wisata Lamongan</li>
-					<li>Paket Wisata Borobudur</li>
-				</ul>
+				<div class="bgr"></div>
+				<div class="imgbox"><img src="asset/prambanan.jpg" alt=""></div>
+				<div class="text">
+					<p>Wisata Prambanan</p>
+				</div>
+			</div>
+			<div class="content">
+				<div class="bgr"></div>
+				<div class="imgbox"><img src="asset/prambanan.jpg" alt=""></div>
+				<div class="text">
+					<p>Wisata Prambanan</p>
+				</div>
+			</div>
+			<div class="content">
+				<div class="bgr"></div>
+				<div class="imgbox"><img src="asset/prambanan.jpg" alt=""></div>
+				<div class="text">
+					<p>Wisata Prambanan</p>
+				</div>
 			</div>
 		</div>
-		<div style="clear:both">
-		</div>
+		<div style="clear:both"></div>
 	</div>
 
 	<div class="footer">
@@ -104,7 +112,26 @@
 		<hr size="1px" color="gray">
 		<div class="footercopyright">Copyright 2019 Dolandisik Travel.</div>
 	</div>
-	<script src="js/js.js"></script>
+	<script src="js/stickynavbar.js"></script>
+	<script>
+		window.onscroll = function () {
+			StickySidebar();
+			myFunction();
+		}
+		var sidebar = document.getElementById("sidebar");
+		var stickysidebar = sidebar.offsetTop;
+		function StickySidebar() {
+			if (window.pageYOffset >= stickysidebar) {
+				sidebar.classList.add("stickysidebar")
+			} else {
+				sidebar.classList.remove("stickysidebar");
+			}
+		};</script>
+	<script>
+		function goToURL() {
+			location.href = 'keranjang.html';
+		}
+	</script>
 </body>
 
 </html>
