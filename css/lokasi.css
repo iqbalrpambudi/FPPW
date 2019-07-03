@@ -233,14 +233,25 @@ li{
 		width: 100%;
 	}
 }
-
-@media screen and (max-width: 500px) {
-	.container {
+@media screen and (max-width: 950px) {
+	.container .box2 {
+		float: none;
 		width: 100%;
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+	.container {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 950px) {
+	.box2 .content {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
 	.footer .footerkolom {
 		width: 50%;
 	}

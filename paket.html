@@ -18,7 +18,7 @@
         <a href="lokasi.html">Lokasi </a>
         <a href="paket.html">Paket Liburan </a>
         <a href="homepage.html">Home</a></li>
-      </div>
+    </div>
 
     <div class="container">
 
@@ -96,19 +96,19 @@
         </div>
         <div class="column">
             <div class="content">
-                <div class="titlepaket bg-gold">Wisata Pantai Kasap</div>
-                <div class="gambarpaket"><img src="asset\borobudur.png"></div>
+                <div class="titlepaket bg-gold">Wisata Pulau Bawean</div>
+                <div class="gambarpaket"><img src="asset/rajaampat.png"></div>
                 <div class="harga">Rp. 999.999</div>
-                <p>Paket Wisata Candi Borobudur</p>
+                <p>Paket Wisata ke Pulau Bawean</p>
                 <div class="button">Pesan Paket</div>
             </div>
         </div>
         <div class="column">
             <div class="content">
-                <div class="titlepaket bg-gold">Lava Tour Merapi</div>
-                <div class="gambarpaket"><img src="asset\bromo.png"></div>
+                <div class="titlepaket bg-gold">Pulau Komodo</div>
+                <div class="gambarpaket"><img src="asset/komodo.png"></div>
                 <div class="harga">Rp. 999.999</div>
-                <p>Menjelajah Gunung Merapi</p>
+                <p>Menjelajah Pulau Komodo</p>
                 <div class="button">Pesan Paket</div>
             </div>
         </div>
@@ -119,24 +119,24 @@
                 <div class="gambarpaket"><img src="asset/borobudur.png"></div>
                 <div class="harga">Rp. 499.999</div>
                 <p>Paket wisata menjelajah kota Jogja</p>
-                <div class="button">Pesan Paket</div>
+                <div class="button" onclick="goToURL()">Pesan Paket</div>
             </div>
         </div>
         <div class="column">
             <div class="content">
                 <div class="titlepaket bg-silver">Wisata Pantai Kasap</div>
-                <div class="gambarpaket"><img src="asset\borobudur.png"></div>
+                <div class="gambarpaket"><img src="asset/kuta.png"></div>
                 <div class="harga">Rp. 499.999</div>
-                <p>Paket Wisata Candi Borobudur</p>
+                <p>Paket Wisata ke Pantai Kasap</p>
                 <div class="button">Pesan Paket</div>
             </div>
         </div>
         <div class="column">
             <div class="content">
                 <div class="titlepaket bg-silver">Lava Tour Merapi</div>
-                <div class="gambarpaket"><img src="asset\bromo.png"></div>
+                <div class="gambarpaket"><img src="asset/bromo.png"></div>
                 <div class="harga">Rp. 499.999</div>
-                <p>Menjelajah Gunung Merapi</p>
+                <p>Menjelajah Kawah Merapi</p>
                 <div class="button">Pesan Paket</div>
             </div>
         </div>
@@ -203,6 +203,11 @@
                 });
             })
         });
+    </script>
+    <script>
+        function goToURL() {
+            location.href = 'lokasi-detail.html';
+        }
     </script>
 </body>
 

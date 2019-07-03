@@ -87,7 +87,7 @@
       <div class="content">
         <div class="slcontainer">
           <img src="asset/pantai.jpg" alt="ske" class="slimage">
-          <div class="sloverlay">
+          <div class="sloverlay" onclick="goToURL()">
             <div class="sltext">Pantai Parangtritis</div>
           </div>
         </div>
@@ -220,9 +220,34 @@
     <div class="footercopyright">Copyright 2019 Dolandisik Travel.</div>
   </div>
 
+  <div class="promo">
+    <h2>Promo diskon 30%</h2>
+  <div class="closebox" onclick="close()">x</div>
+  </div>
   <!-- Script untuk sticky navbar -->
   <script src="js/stickynavbar.js"></script>
   <script src="js/jquery.js"></script>
+  <script>
+    function goToURL() {
+        location.href = 'keranjang.html';
+    }
+</script>
+<script>
+$(document).ready(function(){
+  $(".closebox").click(function(){
+    $(this).remove();
+    $(".promo").remove();
+  });
+  $(".promo").click(function(){
+    window.location.href="promo.html";
+  })
+})
+</script>
+<script>
+$(document).ready(function(){
+  $('.promo').delay(2000).animate({opacity:1},1000);
+})
+</script>
 </body>
 
 </html>
