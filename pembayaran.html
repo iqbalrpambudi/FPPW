@@ -75,7 +75,7 @@
                 </tr>
                 <tr>
                     <td>Harga</td>
-                    <td> : <span id="lblHarga"></span></td>
+                    <td> : <span id="lblPromo"></span></td>
                 </tr>
                 <tr>
                     <td>Bank</td>
@@ -138,6 +138,10 @@
         <div class="footercopyright">Copyright 2019 Dolandisik Travel.</div>
     </div>
 
+    <div class="promo">
+    <div class="pagetitle">Terimakasih Silahkan Nikmati Liburan Anda</div>
+    <div class="closebox" onclick="close()">x</div>
+  </div>
     <script src="js/stickynavbar.js"></script>
     <script src="js/jquery.js"></script>
 
@@ -155,22 +159,30 @@
                     }
                 }
             }
-            if (queryString['nama'] != null && queryString['telp'] != null && queryString['waktu'] != null && queryString['jumlah'] != null && queryString['harga'] != null) {
-                var datanama = "";
-                var datatelp = "";
-                var datawakt = "";
-                var datajml = "";
-                var datahrga = "";
-                datanama += queryString['nama'];
-                datatelp += queryString['telp'];
-                datawakt += queryString['waktu'];
-                datajml += queryString['jumlah'];
-                datahrga += queryString['harga'];
+            if (queryString['nama'] != null && queryString['telp'] != null && queryString['waktu'] != null && queryString['jumlah'] != null && queryString['promo'] != null) {
+                var datanama = queryString['nama'];
+                var datatelp = queryString['telp'];
+                var datawakt = queryString['waktu'];
+                var datajml = queryString['jumlah'];
+                var datapromo = queryString['promo'];
+
                 $("#lblNama").html(datanama);
                 $("#lblTelp").html(datatelp);
                 $("#lblWaktu").html(datawakt);
                 $("#lblJumlah").html(datajml);
-                $("#lblHarga").html(datahrga);
+                if (datapromo==="JUNIBERKAH")
+                {
+                    $("#lblPromo").html("Rp. 1.050.000");
+                }
+                else if (datapromo==="LEBARANASIK")
+                {
+                    $("#lblPromo").html("Rp. 900.000");
+                }
+                else
+                {
+                    $("#lblPromo").html("Rp. 1.500.000");
+                }
+                
             }
         });
     </script>
@@ -207,7 +219,21 @@
             });
         });
     </script>
-
+    <!-- Script untuk popup pembayaran -->
+    <script>
+$(document).ready(function(){
+  $(".closebox").click(function(){
+    $(this).remove();
+    $(".promo").remove();
+  });
+})
+</script>
+<script>
+$(document).ready(function(){
+  $('#btnPopup').click(function(){
+    $('.promo').animate({opacity:1},1000);})
+})
+</script>
 </body>
 
 </html>

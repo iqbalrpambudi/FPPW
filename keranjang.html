@@ -104,7 +104,7 @@
                         </tr>
                         <tr>
                             <td>Kode Promo</td>
-                            <td> <input id="txtHarga" type="text" name="harga" placeholder=" *opsional"></td>
+                            <td> <input id="txtPromo" type="text" name="promo" placeholder=" *opsional"></td>
                             <td></td>
                         </tr>
                         <tr>
@@ -192,7 +192,7 @@
     <script>
         $(function () {
             $("#btnQueryString").bind("click", function () {
-                var url = "pembayaran.html?nama=" + encodeURIComponent($("#txtNama").val()) + "&telp=" + encodeURIComponent($("#txtTelp").val()) + "&waktu=" + encodeURIComponent($("#slWaktu").val()) + "&jumlah=" + encodeURIComponent($("#slJumlah").val()) + "&harga=" + encodeURIComponent($("#txtHarga").val());
+                var url = "pembayaran.html?nama=" + encodeURIComponent($("#txtNama").val()) + "&telp=" + encodeURIComponent($("#txtTelp").val()) + "&waktu=" + encodeURIComponent($("#slWaktu").val()) + "&jumlah=" + encodeURIComponent($("#slJumlah").val()) + "&promo=" + encodeURIComponent($("#txtPromo").val());
                 window.location.href = url;
             });
         });
