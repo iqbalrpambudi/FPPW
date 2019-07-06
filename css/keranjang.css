@@ -349,8 +349,8 @@ tr td {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    background-color: #202020;
-    padding: 40px 40px 0 40px
+    background-color: #3c4049;
+    padding: 40px 15% 0px 15%;
 }
 
 .footer .footerkolom {
@@ -361,23 +361,58 @@ tr td {
 
 .footer .footercopyright {
     padding: 30px;
-    color: #f3f3f3;
+    color: #e8e8e8;
     text-align: center
 }
 
 .footerkolom .footercontent {
-    color: #f5f5f5;
+    color: #eeee;
     font-size: 16px;
-    background-color: transparent
+    background-color: transparent;
+    font-weight: lighter;
+    padding: 20px
 }
 
+.f-head{
+    color: #00aeef;
+    font-size: 20px;
+}
+
+/* Socmed Icons  */
 .socmed {
-    width: 40px
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin: 10px
+}
+.socmed img{
+    position: absolute;
+    width: 40px;
+    left: 0;
+}
+.socmed p{
+   position: absolute;
+   left: 45px;
+   top: 50%;
+   transform: translate(0,-50%)
+}
+.socmed:hover {
+    cursor: pointer;
+    background-color: #2e2e2e;
+    transition: 0.4s ease;
+}
+/* Pembayaran */
+.pembayaran{
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin: 3px;
+    padding: 5px;
+}
+.pembayaran img{
+    height: 30px;
 }
 
-.socmed:hover {
-    cursor: pointer
-}
 
 .wd-20 {
     width: 20%
